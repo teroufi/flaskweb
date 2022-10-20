@@ -22,17 +22,24 @@ spec:
       containers:
       - name: flaskapp
         image: anassteroufi/flask-web:1.0.0
-        # resources:
-        #   requests:
-        #     memory: "64Mi"
-        #     cpu: "250m"
-        #   limits:
-        #     memory: "256Mi"
-        #     cpu: "500m"
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
         ports:
         - containerPort: 5000
       - name: mariadbapp
         image: mariadb
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
         ports:
         - containerPort: 3306
         env:
