@@ -41,6 +41,10 @@ spec:
         volumeMounts:
         - name: mariadb-volume
           mountPath: /var/lib/mysql
+      volumes:
+      - name: mariadb-volume
+        persistentVolumeClaim:
+          claimName: mysql-pvc
 
 ---
 apiVersion: v1
