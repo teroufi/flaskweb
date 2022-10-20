@@ -1,4 +1,4 @@
-CREATE DATABASE exo3;
+-- CREATE DATABASE exo3;
 CREATE TABLE `exo3`.`students` (
       `id` BIGINT NULL AUTO_INCREMENT,
       `name` VARCHAR(45) NULL,
